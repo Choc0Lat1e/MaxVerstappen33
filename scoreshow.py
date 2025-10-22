@@ -55,7 +55,6 @@ def main():
         rows.append(row)
 
     df = pd.DataFrame(rows)
-    # 합계(소수 허용), 평균
     df["합계"] = df[subjects].sum(axis=1)
     df["평균"] = df[subjects].mean(axis=1)
 
@@ -70,7 +69,6 @@ def main():
     fmt_stats = {"평균": "{:.2f}", "중앙값": "{:.2f}", "표준편차": "{:.2f}"}
 
     display(HTML("<h4>학생별 점수 표</h4>"))
-    # 스타일 지정 (index 포함) — Jupyter/Colab에서 예쁘게 보입니다.
     styled_df = df.style.format(fmt_students).set_table_styles([
         {"selector": "th", "props": [("text-align", "center")]},
         {"selector": "td", "props": [("text-align", "center")]}
@@ -85,4 +83,5 @@ def main():
     display(styled_stats)
 
 if __name__ == "__main__":
+
     main()11
