@@ -64,8 +64,8 @@ def main():
 
     clear_output(wait=True)
 
-    fmt_students = {s: "{:.6f}" for s in subjects}
-    fmt_students.update({"합계": "{:.6f}", "평균": "{:.2f}"})
+    fmt_students = {s: "{:.2f}" for s in subjects}
+    fmt_students.update({"합계": "{:.2f}", "평균": "{:.2f}"})
     fmt_stats = {"평균": "{:.2f}", "중앙값": "{:.2f}", "표준편차": "{:.2f}"}
 
     display(HTML("<h4>학생별 점수 표</h4>"))
@@ -85,4 +85,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
